@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from langchain import PromptTemplate
 from langchain import LLMChain
 from langchain.llms import CTransformers
@@ -27,3 +29,4 @@ llm = CTransformers(model='model/llama-2-7b-chat.ggmlv3.q4_0.bin',
 LLM_Chain=LLMChain(prompt=prompt, llm=llm)
 
 print(LLM_Chain.run("How are you?").encode('cp1252', errors='ignore'))
+#print(LLM_Chain.run("How are you?"))
